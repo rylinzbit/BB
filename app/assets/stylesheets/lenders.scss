@@ -1,0 +1,25 @@
+// Place all the styles related to the Lenders controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+#need_help{
+	#lend_btn{
+		border: none;
+		width: 40px;
+	}
+	input{
+		width: 40px;
+	}
+}
+table, td, th{
+	border: solid black 1px;
+	td,th{
+		padding: 5px;
+	}
+	th{
+		background-color: lightgray;
+	}
+}
+.logout{
+	float: right;
+	margin-right: 40px;
+}

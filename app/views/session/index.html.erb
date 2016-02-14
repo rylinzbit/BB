@@ -1,0 +1,30 @@
+<div>
+	<div id="lender">
+		<h2>Lender</h2>
+		<form action="/lenders/create" method="POST">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+			<p><span>First Name: </span><input type="text" name="lender[first_name]"></p>
+			<p><span>Last Name: </span><input type="text" name="lender[last_name]"></p>
+			<p><span>Email: </span><input type="email" name="lender[email]"></p>
+			<p><span>Password: </span><input type="password" name="lender[password]"></p>
+			<p><span>Money: </span><input type="number" name="lender[money]" min="100" max="100000000"></p>
+			<p><input type="submit" value="Register" class="submit_btn"></p>
+		</form>
+		<a href="/online_lending/login">Already a member?</a>
+	</div>
+	<div id="borrower">
+		<h2>Borrower</h2>
+		<form action="/borrowers/create" method="POST">
+			<input type="hidden" name="authenticity_token" value="<%=form_authenticity_token%>">
+			<p><span>First Name: </span><input type="text" name="borrower[first_name]"></p>
+			<p><span>Last Name: </span><input type="text" name="borrower[last_name]"></p>
+			<p><span>Email: </span><input type="email" name="borrower[email]"></p>
+			<p><span>Password: </span><input type="password" name="borrower[password]"></p>
+			<p><span>Need Money For: </span><input type="text" name="borrower[purpose]"></p>
+			<p><span>Description: </span><textarea type="text" name="borrower[description]"></textarea></p>
+			<p><span>Amount Needed: </span><input type="number" name="borrower[money]" min="10"></p>
+			<p><input type="submit" value="Register" class="submit_btn"></p>
+		</form>
+		<a href="/online_lending/login">Already a member?</a>
+	</div>
+</div>

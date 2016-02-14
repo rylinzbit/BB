@@ -1,0 +1,64 @@
+<a href="/session/logout" class="logout">Logout</a>
+<p><span class"l_and_b_page">Name: </span><%= @user.first_name %> <%= @user.last_name %></p>
+<p><span class"l_and_b_page">Account Balance: </span>$<%= @user.money %></p>
+<div id="need_help">
+	<h4>List of people in need of help:</h4>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Need Money For</th>
+				<th>Reason for Loan</th>
+				<th>Amount Needed</th>
+				<th>Amount Raised</th>
+				<th>Action</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @borrowers.each do |brwrs| %>
+				<tr>
+					<td><%= brwrs.first_name %> <%= brwrs.last_name %></td>
+					<td><%= brwrs.purpose %></td>
+					<td><%= brwrs.description %></td>
+					<td><%= brwrs.money %></td>
+					<td><%= brwrs.raised %></td>
+					<td>
+						<form action="/lenders/lend" method="POST">
+							<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+							<input type="hidden" name="borrower_id" value="<%= brwrs.id %>">
+							$<input type="number" name="lend_money">
+							<input type="submit" value="Lend" id="lend_btn">
+						</form>
+					</td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>
+<div id="people_helped">
+	<h4>List of People you lend money to:</h4>
+	<table>
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Need Money For</th>
+				<th>Reason for Loan</th>
+				<th>Amount Needed</th>
+				<th>Amount Raised</th>
+				<th>Amount Lent</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @borrowed.each do |brwr| %>
+				<tr>
+					<td><%= brwr.first_name %> <%= brwr.last_name %></td>
+					<td><%= brwr.purpose %></td>
+					<td><%= brwr.description %></td>
+					<td><%= brwr.money %></td>
+					<td><%= brwr.raised %></td>
+					<td><%= brwr.amount %></td>
+				</tr>
+			<% end %>
+		</tbody>
+	</table>
+</div>

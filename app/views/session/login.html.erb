@@ -1,0 +1,10 @@
+<div id="login">
+	<h2>Login</h2>
+	<form action="/session/create" method="POST">
+		<input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+		<p><span>Email: </span><input type="email" name="email"></p>
+		<p><span>Password: </span><input type="password" name="password"></p>
+		<input type="submit" value="Login" class="submit_btn">
+	</form>
+	<a href="/online_lending/register">Click here to register</a>
+</div>

@@ -1,0 +1,40 @@
+// Place all the styles related to the Session controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+#lender, #borrower{
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 40px;
+	.submit_btn{
+		border: none;
+		width: 80px;
+		float: right
+	}
+}
+	h2{
+		text-decoration: underline;
+	}
+	input, textarea{
+		display: inline-block;
+		vertical-align: top;
+		border: solid black 1px;
+		width: 150px;
+		padding: 5px;
+	}
+	textarea{
+		height: 100px;
+	}
+	span{
+		display: inline-block;
+		width: 120px;
+	}
+#login{
+	margin-left: 40px;
+	width: 280px;
+	.submit_btn{
+		border: none;
+		width:80px;
+		float: right
+	}
+}
