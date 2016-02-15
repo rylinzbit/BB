@@ -17,7 +17,7 @@ development:
   pool: 5
   username: ubuntu
   timeout: 5000
-  database: db/development.pg
+  database: black_belt_development
 
 # Warning: The database defined as "test" will be erased and
 # re-generated from your development database when you run "rake".
@@ -28,7 +28,7 @@ test:
   pool: 5
   username: ubuntu
   timeout: 5000
-  database: db/test.pg
+  database: black_belt_test
 
 production:
   adapter: postgresql
@@ -36,4 +36,4 @@ production:
   pool: 5
   username: ubuntu
   timeout: 5000
-  database: black_belt_production.pg
+  database: black_belt_production
