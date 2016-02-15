@@ -1,6 +1,5 @@
 class SessionController < ApplicationController
 	def index
-		# session.clear
 		render :index
 	end
 
